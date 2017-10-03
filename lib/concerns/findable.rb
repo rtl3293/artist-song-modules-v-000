@@ -5,5 +5,5 @@ module findable
       self.all.detect{|a| a.name == name}
     end
   end
-  
+
 end
