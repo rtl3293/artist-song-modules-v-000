@@ -9,7 +9,7 @@ class Song
   @@songs = []
 
   def initialize
-    self.all << self
+    self.class.all << self
   end
 
   # def self.find_by_name(name)
