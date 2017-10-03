@@ -5,6 +5,7 @@ class Artist
   attr_reader :songs
   extend Memorable::ClassMethods
   extend Findable::ClassMethods
+  include Paramable::InstanceMethods
   @@artists = []
 
   # def self.find_by_name(name)
@@ -37,8 +38,8 @@ class Artist
     songs.each { |song| add_song(song) }
   end
 
-  def to_param
-    name.downcase.gsub(' ', '-')
-  end
+  # def to_param
+  #   name.downcase.gsub(' ', '-')
+  # end
 
 end
