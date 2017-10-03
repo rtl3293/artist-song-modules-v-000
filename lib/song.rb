@@ -2,7 +2,7 @@ require 'pry'
 
 class Song
   attr_accessor :name, :artist
-
+  extend Memorable::ClassMethods
   @@songs = []
 
   def initialize
