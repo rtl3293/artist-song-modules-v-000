@@ -4,6 +4,8 @@ class Song
   attr_accessor :name, :artist
   extend Memorable::ClassMethods
   extend Findable::ClassMethods
+  include Paramable::InstanceMethods
+
   @@songs = []
 
   def initialize
@@ -18,9 +20,9 @@ class Song
   #   self.all.clear
   # end
 
-  def to_param
-    name.downcase.gsub(' ', '-')
-  end
+  # def to_param
+  #   name.downcase.gsub(' ', '-')
+  # end
 
   # def self.count
   #   self.all.count
